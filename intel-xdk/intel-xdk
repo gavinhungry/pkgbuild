@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[ "$1" == "--bundled" ] && NW=/opt/intel/XDK/bin/nw || NW=/usr/bin/nw
+$NW /opt/intel/XDK/xdk
