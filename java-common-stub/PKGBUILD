@@ -1,8 +1,0 @@
-pkgname=java-common-stub
-pkgver=1
-pkgrel=0
-pkgdesc='Common files for Java Environments (stub package)'
-arch=('any')
-replaces=('java-runtime-headless-meta' 'java-runtime-meta' 'java-environment-meta')
-provides=('java-common')
-conflicts=('java-common')
