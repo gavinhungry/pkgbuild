@@ -1,5 +1,5 @@
-# Maintainer: onny <onny@project-insanity.org>
-# Contributor: Gavin Lloyd <gavinhungry@gmail.com>
+# Maintainer: Gavin Lloyd <gavinhungry@gmail.com>
+# Contributor: onny <onny@project-insanity.org>
 
 pkgname=sha3sum-git
 pkgver=0.220.5933471
