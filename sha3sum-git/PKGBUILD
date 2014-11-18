@@ -4,7 +4,7 @@
 pkgname=sha3sum-git
 pkgver=0.220.5933471
 pkgrel=1
-pkgdesc="SHA-3/Keccak checksum utility"
+pkgdesc="Checksum utility for Keccak and its close derivatives SHA-3, SHAKE and RawSHAKE"
 url="https://github.com/maandree/sha3sum"
 license="AGPL3"
 arch=('i686' 'x86_64')
