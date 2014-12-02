@@ -9,7 +9,7 @@ url='http://beaversource.oregonstate.edu/projects/osuisp2/'
 license=('GPL')
 makedepends=('subversion')
 depends=('libusb-compat' 'readline')
-replaces=('avrdude')
+conflicts=('avrdude')
 
 _svntrunk='https://code.oregonstate.edu/svn/osuisp2/avrdude/'
 _svnmod='avrdude'
