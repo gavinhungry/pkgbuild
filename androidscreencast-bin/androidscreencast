@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec /usr/bin/java -classpath "/usr/share/java/androidscreencast/*" net.srcz.android.screencast.Main "$@"
