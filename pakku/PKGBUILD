@@ -1,0 +1,30 @@
+# Maintainer: Gavin Lloyd <gavinhungry@gmail.com>
+
+pkgname=pakku
+pkgver=0.14.2
+pkgrel=0
+pkgdesc='Pacman wrapper with AUR support'
+arch=('x86_64')
+url="https://github.com/kitsunyan/pakku"
+license=('GPL3')
+makedepends=('nim')
+depends=('libcurl.so' 'git')
+backup=('etc/pakku.conf')
+_commit='7242638eb774b39b3c0fe0f4d2c24e9138edfd24'
+source=("pakku.zip::$url/archive/${_commit}.zip")
+sha256sums=('d23a5cf9c46a93f13cded9a954079615ca131f7ae47a4e2e49ead5de3ecd772a')
+
+prepare() {
+  cd "$srcdir"
+  mv "$pkgname-${_commit}" "$pkgname"
+}
+
+build() {
+  cd "$srcdir/$pkgname"
+  make PREFIX='/usr' NIM_CACHE_DIR='../nimcache'
+}
+
+package() {
+  cd "$srcdir/$pkgname"
+  make PREFIX='/usr' DESTDIR="$pkgdir" install
+}
