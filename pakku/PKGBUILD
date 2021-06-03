@@ -1,18 +1,19 @@
 # Maintainer: Gavin Lloyd <gavinhungry@gmail.com>
 
 pkgname=pakku
-pkgver=0.14.2
+pkgver=0.14
 pkgrel=0
+epoch=1
 pkgdesc='Pacman wrapper with AUR support'
 arch=('x86_64')
-url="https://github.com/kitsunyan/pakku"
+url="https://github.com/zqqw/pakku"
 license=('GPL3')
 makedepends=('nim')
 depends=('libcurl.so' 'git')
 backup=('etc/pakku.conf')
-_commit='7242638eb774b39b3c0fe0f4d2c24e9138edfd24'
+_commit='334e09a1510fc0f66898b1b4be2dd66d662062fe'
 source=("pakku.zip::$url/archive/${_commit}.zip")
-sha256sums=('d23a5cf9c46a93f13cded9a954079615ca131f7ae47a4e2e49ead5de3ecd772a')
+sha256sums=('76c59ad10b2cf11d7df110cfbce1dc37eb73ba797264e42a1c03e539faea1d8f')
 
 prepare() {
   cd "$srcdir"
