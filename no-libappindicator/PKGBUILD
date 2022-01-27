@@ -1,0 +1,7 @@
+pkgname=no-libappindicator
+pkgver=0.0.0
+pkgrel=2
+pkgdesc='Placeholder for libappindicator'
+arch=('any')
+provides=('libappindicator-gtk2' 'libappindicator-gtk3')
+conflicts=('libappindicator-gtk2' 'libappindicator-gtk3')
