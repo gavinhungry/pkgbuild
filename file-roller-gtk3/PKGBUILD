@@ -1,0 +1,64 @@
+# Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+_pkgname=file-roller
+pkgname=${_pkgname}-gtk3
+pkgver=43.1
+pkgrel=1
+pkgdesc="Create and modify archives"
+url="https://wiki.gnome.org/Apps/FileRoller"
+arch=(x86_64)
+license=(GPL)
+conflicts=($_pkgname)
+depends=(
+  dconf
+  file
+  json-glib
+  libarchive
+  libhandy
+  libportal-gtk3
+  unzip
+  zip
+)
+makedepends=(
+  appstream-glib
+  git
+  libnautilus-extension
+  meson
+  yelp-tools
+)
+optdepends=(
+  'lrzip: lrzip archive support'
+  'p7zip: 7z, arj, exe and encrypted zip files support'
+  'squashfs-tools: squashfs image support'
+  'unace: ACE archive support'
+  'unrar: better RAR archive support'
+)
+groups=(gnome-extra)
+_commit=356387f67f412e8370de56be314ff8fe8f029408  # tags/43.1^0
+source=("git+https://gitlab.gnome.org/GNOME/file-roller.git#commit=$_commit")
+b2sums=('SKIP')
+
+pkgver() {
+  cd $_pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $_pkgname
+}
+
+build() {
+  arch-meson $_pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:
