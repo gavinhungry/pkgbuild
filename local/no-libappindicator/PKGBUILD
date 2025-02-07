@@ -1,6 +1,8 @@
+# Maintainer: Gavin Lloyd <gavinhungry@gmail.com>
+
 pkgname=no-libappindicator
-pkgver=0.0.0
-pkgrel=2
+pkgver=1
+pkgrel=1
 pkgdesc='Placeholder for libappindicator'
 arch=('any')
 provides=('libappindicator-gtk2' 'libappindicator-gtk3')
