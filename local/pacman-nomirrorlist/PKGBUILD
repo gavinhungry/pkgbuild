@@ -5,5 +5,5 @@ pkgver=1
 pkgrel=1
 pkgdesc='Placeholder to replace pacman-mirrorlist'
 arch=('any')
-provides=('pacman-mirrorlist')
 conflicts=('pacman-mirrorlist')
+provides=('pacman-mirrorlist')

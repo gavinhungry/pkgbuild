@@ -5,5 +5,5 @@ pkgver=1
 pkgrel=1
 pkgdesc='Placeholder for libappindicator'
 arch=('any')
-provides=('libappindicator-gtk2' 'libappindicator-gtk3')
 conflicts=('libappindicator-gtk2' 'libappindicator-gtk3')
+provides=('libappindicator-gtk2' 'libappindicator-gtk3')
